@@ -1,0 +1,66 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 90%;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Make the calculator layout vertical for narrow screens */
+.calculator {
+  display: flex;
+  flex-direction: column; /* Default: stack elements vertically */
+  gap: 20px;
+}
+
+/* Ensure labels and inputs adjust to smaller screens */
+.calculator label {
+  font-size: 1em;
+  margin-bottom: 5px;
+}
+
+.calculator input,
+.calculator select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+/* Button styling */
+.calculator button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+/* Make sure button doesn't overflow */
+.calculator button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive adjustments for mobile devices */
+@media (min-width: 600px) {
+  .calculator {
+    flex-direction: row; /* On wider screens, display items side by side */
+    gap: 40px;
+  }
+
+  .calculator input,
+  .calculator select {
+    width: calc(50% - 20px); /* Adjust input widths on wider screens */
+  }
+
+  .calculator button {
+    width: auto; /* Adjust button width dynamically */
+  }
+}

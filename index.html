@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bra Size Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Bra Size Calculator</h1>
+    <form class="calculator">
+      <div>
+        <label for="underbust">Underbust Measurement (in inches):</label>
+        <input type="number" id="underbust" name="underbust" placeholder="e.g., 32" required>
+      </div>
+      <div>
+        <label for="bust">Bust Measurement (in inches):</label>
+        <input type="number" id="bust" name="bust" placeholder="e.g., 36" required>
+      </div>
+      <div>
+        <label for="activity">Preferred Activity:</label>
+        <select id="activity" name="activity">
+          <option value="everyday">Everyday Wear</option>
+          <option value="sports">Sports</option>
+          <option value="swimwear">Swimwear</option>
+          <option value="traditional">Traditional Dress</option>
+        </select>
+      </div>
+      <div>
+        <label for="fabric">Preferred Fabric:</label>
+        <select id="fabric" name="fabric">
+          <option value="cotton">Cotton</option>
+          <option value="lace">Lace</option>
+          <option value="mesh">Mesh</option>
+          <option value="silk">Silk</option>
+        </select>
+      </div>
+      <button type="button" onclick="calculateBraSize()">Calculate</button>
+    </form>
+    <p id="result"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
